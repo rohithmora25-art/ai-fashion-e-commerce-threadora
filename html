@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THREADORA — Style Beyond Every Generation</title>
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <span class="muted">STYLE BEYOND EVERY GENERATION</span>
+    <span class="divider">|</span>
+    <span>Complimentary Express Delivery on Orders Above ₹1,999 • Use Code </span>
+    <strong class="promo-highlight">THREADORA10</strong>
+  </div>
+
+  <!-- STICKY LUXURY NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="nav-left">
+        <button type="button" id="mobileMenuBtn" class="icon-btn mobile-only" aria-label="Toggle Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+
+        <!-- THREADORA Custom SVG Logo -->
+        <a href="#home" class="brand-logo" data-nav="home" data-gender="All">
+          <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="34" height="34" rx="9" fill="#0A0A0A" stroke="#D1D5DB" stroke-width="1.2" />
+            <path d="M9 11.5H27M18 11.5V26" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" />
+            <path d="M12.5 17.5C15.5 15.2 20.5 19.8 23.5 17.5" stroke="#9CA3AF" stroke-width="1.6" stroke-linecap="round" />
+            <circle cx="18" cy="26" r="1.6" fill="#D1D5DB" />
+          </svg>
+          <div class="brand-text">
+            <span class="brand-title">THREADORA</span>
+            <span class="brand-subtitle">Maison of Style</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links">
+        <a href="#home" class="nav-link" data-nav="home" data-gender="All">Home</a>
+        <a href="#catalog" class="nav-link" data-nav="catalog" data-gender="Men">Men</a>
+        <a href="#catalog" class="nav-link" data-nav="catalog" data-gender="Women">Women</a>
+        <a href="#catalog" class="nav-link" data-nav="catalog" data-gender="Kids">Kids</a>
+        <a href="#new-arrivals" class="nav-link">New Arrivals</a>
+        <a href="#trending-now" class="nav-link">Trending</a>
+        <a href="#ai-style-studio" class="nav-ai-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+          <span>AI Style Studio</span>
+        </a>
+      </nav>
+
+      <!-- Action Buttons: Search, Wishlist, Bag -->
+      <div class="nav-actions">
+        <button type="button" id="searchToggleBtn" class="icon-btn" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+
+        <button type="button" id="wishlistOpenBtn" class="icon-btn badge-btn" aria-label="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <span id="wishlistBadge" class="badge">0</span>
+        </button>
+
+        <button type="button" id="cartOpenBtn" class="bag-btn" aria-label="Shopping Bag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="bag-label">Bag</span>
+          <span id="cartBadge" class="bag-count">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Expandable Global Search Bar -->
+    <div id="searchBarDrawer" class="search-drawer hidden">
+      <div class="container search-drawer-inner">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="globalSearchInput" placeholder="Search oversized hoodies, cargo pants, dresses, formal shirts, kids wear..." />
+        <button type="button" id="clearSearchBtn" class="text-btn">Clear</button>
+        <button type="button" id="closeSearchBtn" class="icon-btn" aria-label="Close Search">✕</button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobileMenuDrawer" class="mobile-drawer hidden">
+      <a href="#home" class="mobile-nav-item" data-nav="home" data-gender="All">Home</a>
+      <a href="#catalog" class="mobile-nav-item" data-nav="catalog" data-gender="Men">Men’s Collection (23 Categories)</a>
+      <a href="#catalog" class="mobile-nav-item" data-nav="catalog" data-gender="Women">Women’s Collection</a>
+      <a href="#catalog" class="mobile-nav-item" data-nav="catalog" data-gender="Kids">Kids’ Collection</a>
+      <a href="#new-arrivals" class="mobile-nav-item">New Arrivals</a>
+      <a href="#trending-now" class="mobile-nav-item">Trending Now</a>
+      <a href="#ai-style-studio" class="mobile-nav-item">AI Style Studio ✨</a>
+    </div>
+  </header>
+
+  <!-- HERO OPENING SECTION -->
+  <section id="home" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span class="pulse-dot"></span>
+          <span>Autumn / Winter Luxury Collection</span>
+        </div>
+
+        <h1 class="hero-title">
+          Discover Your <br />
+          <em>Perfect Style.</em>
+        </h1>
+
+        <p class="hero-subtitle">
+          Fashion for Every Age. Style for Every Generation. Explore architectural streetwear,
+          tailored luxury essentials, and AI-curated silhouettes crafted in pure monochrome precision.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#catalog" class="btn btn-primary" data-nav="catalog" data-gender="Men">
+            Shop Men →
+          </a>
+          <a href="#catalog" class="btn btn-secondary" data-nav="catalog" data-gender="Women">
+            Shop Women
+          </a>
+          <a href="#catalog" class="btn btn-secondary" data-nav="catalog" data-gender="Kids">
+            Shop Kids
+          </a>
+        </div>
+
+        <div class="hero-metrics">
+          <div>
+            <strong>480 GSM</strong>
+            <span>Heavyweight Organic Cotton</span>
+          </div>
+          <div>
+            <strong>AI Stylist</strong>
+            <span>Instant Outfit Curation</span>
+          </div>
+          <div>
+            <strong>4.9 ★</strong>
+            <span>18,000+ Global Orders</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-image-card">
+          <img
+            src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1400&q=85"
+            alt="THREADORA Editorial Fashion Collection"
+          />
+          <div class="hero-gradient"></div>
+          <div class="hero-glass-overlay">
+            <div>
+              <span class="eyebrow-sm">THREADORA STUDIO • 2026</span>
+              <h3>Monochrome Streetwear & Tailored Couture</h3>
+            </div>
+            <a href="#ai-style-studio" class="btn btn-dark-sm">✨ Try AI Stylist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOTIONAL EDITORIAL BANNERS -->
+  <section class="container section-pad">
+    <div class="promo-grid">
+      <div class="promo-card">
+        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1000&q=85" alt="Men's Streetwear Capsule" />
+        <div class="promo-overlay"></div>
+        <div class="promo-body">
+          <span class="glass-tag">Men’s Flagship Drop</span>
+          <h3>Heavyweight Hoodies & Tactical Cargos</h3>
+          <p>23 curated men’s categories engineered with 480 GSM organic terry & architectural fits.</p>
+          <a href="#catalog" class="btn btn-white-sm" data-nav="catalog" data-gender="Men">Explore Men’s Edit →</a>
+        </div>
+      </div>
+
+      <div class="promo-card">
+        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1000&q=85" alt="Women & Kids Luxury Capsule" />
+        <div class="promo-overlay"></div>
+        <div class="promo-body">
+          <span class="glass-tag">Limited Season Privilege • Up to 35% Off</span>
+          <h3>Atelier Satin, Denim & Junior Couture</h3>
+          <p>Elevate every wardrobe across generations. Extra 10% off at checkout with THREADORA10.</p>
+          <a href="#catalog" class="btn btn-white-sm" data-nav="catalog" data-gender="Women">Shop Women & Kids →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW ARRIVALS SECTION -->
+  <section id="new-arrivals" class="bg-soft border-y section-pad">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="eyebrow">Fresh From The Atelier</span>
+          <h2 class="section-title">New Arrivals</h2>
+        </div>
+        <a href="#catalog" class="link-arrow" id="viewAllNewBtn">View All New Drops →</a>
+      </div>
+      <div id="newArrivalsGrid" class="product-grid"></div>
+    </div>
+  </section>
+
+  <!-- FULL INTERACTIVE CATALOGUE SECTION -->
+  <section id="catalog" class="container section-pad-lg">
+    <div class="section-header">
+      <div>
+        <span class="eyebrow">Complete Global Collection</span>
+        <h2 id="catalogHeading" class="section-title">Curated Collections</h2>
+        <p id="catalogCountText" class="muted-text">Showing authentic garments with verified studio photography</p>
+      </div>
+
+      <!-- Gender Tabs -->
+      <div class="gender-tabs" id="genderTabs">
+        <button type="button" class="tab-btn active" data-gender="All">All Collections</button>
+        <button type="button" class="tab-btn" data-gender="Men">Men</button>
+        <button type="button" class="tab-btn" data-gender="Women">Women</button>
+        <button type="button" class="tab-btn" data-gender="Kids">Kids</button>
+      </div>
+    </div>
+
+    <!-- Kids Age Filter Bar -->
+    <div id="kidsAgeBar" class="kids-age-bar hidden">
+      <span class="filter-label">Filter by Age Group:</span>
+      <button type="button" class="age-pill active" data-age="All Ages">All Ages</button>
+      <button type="button" class="age-pill" data-age="Toddlers 2-4Y">Toddlers 2-4Y</button>
+      <button type="button" class="age-pill" data-age="Kids 5-8Y">Kids 5-8Y</button>
+      <button type="button" class="age-pill" data-age="Tweens 9-12Y">Tweens 9-12Y</button>
+    </div>
+
+    <!-- Category Pills Bar -->
+    <div class="category-bar-wrap">
+      <span id="categoryBarTitle" class="eyebrow-sm">Popular Categories</span>
+      <div id="categoryPillsContainer" class="category-pills"></div>
+    </div>
+
+    <!-- Search & Filter Toolbar -->
+    <div class="filter-toolbar">
+      <div class="filter-search">
+        <input type="text" id="catalogSearchInput" placeholder="Search items, fabrics, fits..." />
+      </div>
+
+      <select id="sizeFilter" aria-label="Filter by Size">
+        <option value="All">Size: All Sizes</option>
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+        <option value="XXL">XXL</option>
+        <option value="30">Waist 30</option>
+        <option value="32">Waist 32</option>
+        <option value="34">Waist 34</option>
+        <option value="4-5Y">Kids 4-5Y</option>
+        <option value="6-7Y">Kids 6-7Y</option>
+        <option value="8-9Y">Kids 8-9Y</option>
+      </select>
+
+      <select id="colorFilter" aria-label="Filter by Color">
+        <option value="All">Color: All Shades</option>
+        <option value="Black">Black / Noir</option>
+        <option value="White">White / Ivory</option>
+        <option value="Grey">Silver / Grey</option>
+        <option value="Blue">Blue / Indigo</option>
+        <option value="Oatmeal">Oatmeal / Sand</option>
+      </select>
+
+      <div class="price-slider-box">
+        <div class="price-slider-top">
+          <span>Max Price</span>
+          <strong id="maxPriceLabel">₹11,000</strong>
+        </div>
+        <input type="range" id="maxPriceSlider" min="1000" max="11000" step="500" value="11000" />
+      </div>
+
+      <select id="sortSelect" aria-label="Sort Products">
+        <option value="featured">Sort: Featured</option>
+        <option value="popularity">Sort: Popularity</option>
+        <option value="rating">Sort: Highest Rated</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+      </select>
+    </div>
+
+    <!-- Tag Quick Chips & Reset -->
+    <div class="tag-filter-row">
+      <div class="tag-chips" id="tagChips">
+        <button type="button" class="tag-chip active" data-tag="All">All Items</button>
+        <button type="button" class="tag-chip" data-tag="New">New Arrivals</button>
+        <button type="button" class="tag-chip" data-tag="Trending">Trending Now</button>
+        <button type="button" class="tag-chip" data-tag="BestSeller">Best Sellers</button>
+      </div>
+      <button type="button" id="resetFiltersBtn" class="reset-link">Reset All Filters</button>
+    </div>
+
+    <!-- Main Products Grid -->
+    <div id="mainCatalogGrid" class="product-grid"></div>
+  </section>
+
+  <!-- AI STYLE STUDIO SECTION -->
+  <section id="ai-style-studio" class="ai-studio-section">
+    <div class="container">
+      <div class="ai-header">
+        <span class="ai-badge">✨ THREADORA Neural Wardrobe Engine</span>
+        <h2 class="ai-title">Your Personal AI Fashion Stylist.</h2>
+        <p class="ai-subtitle">
+          Select your profile, occasion, aesthetic, and budget. Our client-side styling intelligence
+          pairs complete outfits and curates garments directly from the THREADORA archive.
+        </p>
+      </div>
+
+      <!-- AI Controls -->
+      <div class="ai-controls-card">
+        <div class="ai-controls-grid">
+          <div>
+            <label class="ai-label">1. Wardrobe For</label>
+            <div class="ai-gender-switch" id="aiGenderSwitch">
+              <button type="button" class="ai-g-btn active" data-gender="Men">Men</button>
+              <button type="button" class="ai-g-btn" data-gender="Women">Women</button>
+              <button type="button" class="ai-g-btn" data-gender="Kids">Kids</button>
+            </div>
+          </div>
+
+          <div>
+            <label for="aiOccasion" class="ai-label">2. Occasion</label>
+            <select id="aiOccasion" class="ai-select">
+              <option value="Casual">Casual</option>
+              <option value="College">College</option>
+              <option value="Office">Office</option>
+              <option value="Party">Party</option>
+              <option value="Wedding">Wedding</option>
+              <option value="Travel">Travel</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="aiStyle" class="ai-label">3. Style Aesthetic</label>
+            <select id="aiStyle" class="ai-select">
+              <option value="Streetwear">Streetwear</option>
+              <option value="Minimal">Minimal</option>
+              <option value="Korean">Korean</option>
+              <option value="Classic">Classic</option>
+              <option value="Oversized">Oversized</option>
+              <option value="Luxury">Luxury</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="aiCategory" class="ai-label">4. Focus Piece</label>
+            <select id="aiCategory" class="ai-select">
+              <option value="Any">Any Category</option>
+              <option value="Hoodie">Hoodies & Sweatshirts</option>
+              <option value="T-Shirt">Oversized & Graphic Tees</option>
+              <option value="Shirt">Shirts</option>
+              <option value="Cargo">Cargo Pants & Joggers</option>
+              <option value="Jeans">Baggy & Wide Jeans</option>
+              <option value="Jacket">Jackets</option>
+              <option value="Dress">Dresses & Ethnic</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="aiBudget" class="ai-label">5. Budget Range</label>
+            <select id="aiBudget" class="ai-select">
+              <option value="All">All Budgets</option>
+              <option value="Under ₹2,000">Under ₹2,000</option>
+              <option value="₹2,000 - ₹4,500">₹2,000 – ₹4,500</option>
+              <option value="₹4,500+">₹4,500+ Luxury</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Curated Complete Outfit Pairing -->
+      <div class="ai-outfit-card">
+        <div class="ai-outfit-header">
+          <div>
+            <span class="eyebrow">AI Complete Look Pairing</span>
+            <h3 id="aiOutfitTitle" class="ai-outfit-title">Urban Utility Streetwear Combination</h3>
+            <p id="aiOutfitSubtitle" class="muted-text">Oversized Hoodie + Cargo Pants • Heavyweight French terry paired with ripstop cargos</p>
+          </div>
+          <div class="ai-bundle-cta">
+            <div class="bundle-price-box">
+              <span class="eyebrow-sm">Complete 2-Piece Look</span>
+              <strong id="aiOutfitTotalPrice">₹6,798</strong>
+            </div>
+            <button type="button" id="addCompleteLookBtn" class="btn btn-primary">
+              Add Complete Look to Bag
+            </button>
+          </div>
+        </div>
+        <div id="aiOutfitPiecesGrid" class="ai-pieces-grid"></div>
+      </div>
+
+      <!-- AI Individual Matches -->
+      <h3 id="aiMatchesHeading" class="ai-matches-title">Top Individual Matches</h3>
+      <div id="aiMatchesGrid" class="product-grid light-cards"></div>
+    </div>
+  </section>
+
+  <!-- TRENDING NOW & BEST SELLERS -->
+  <section id="trending-now" class="container section-pad-lg">
+    <div class="section-header">
+      <div>
+        <span class="eyebrow">Most Coveted Silhouettes</span>
+        <h2 class="section-title">Trending Now & Best Sellers</h2>
+      </div>
+      <a href="#catalog" class="link-arrow" id="viewAllTrendingBtn">Explore All Trending →</a>
+    </div>
+    <div id="trendingGrid" class="product-grid"></div>
+  </section>
+
+  <!-- ABOUT THREADORA & REVIEWS -->
+  <section class="bg-soft border-y section-pad-lg">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85" alt="THREADORA Flagship Atelier" />
+        </div>
+        <div class="about-text">
+          <span class="eyebrow">About THREADORA</span>
+          <h2 class="section-title">Style Beyond Every Generation.</h2>
+          <p class="muted-text">
+            Born at the intersection of European tailoring and contemporary Asian street culture,
+            THREADORA designs timeless garments for men, women, and children. Every silhouette is
+            crafted from traceable long-staple organic cottons, heavyweight French terries, and fluid
+            satins—uniting architectural minimalism with everyday longevity.
+          </p>
+          <div class="perks-grid">
+            <div class="perk-box">
+              <strong>Express Dispatch</strong>
+              <span>48-hour insured delivery across India.</span>
+            </div>
+            <div class="perk-box">
+              <strong>14-Day Exchange</strong>
+              <span>Effortless doorstep size & style swaps.</span>
+            </div>
+            <div class="perk-box">
+              <strong>Atelier Quality</strong>
+              <span>Pre-shrunk, color-fast certified fabrics.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Reviews -->
+      <div class="reviews-section">
+        <div class="center-header">
+          <span class="eyebrow">Verified Client Voices</span>
+          <h3 class="section-title-sm">Worn Across Generations</h3>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>“The 480 GSM fabric feels genuinely luxury—easily rivals international designer streetwear labels at a fraction of the price.”</p>
+            <div class="review-author">
+              <div>
+                <strong>Aarav Mehta</strong>
+                <span>Mumbai • Atelier Heavyweight Oversized Hoodie</span>
+              </div>
+              <span class="verified-tag">Verified</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>“Used the AI Style Studio to pair the champagne satin dress with the cropped tweed jacket. Arrived in 2 days and fit like bespoke couture.”</p>
+            <div class="review-author">
+              <div>
+                <strong>Ananya Kapoor</strong>
+                <span>Bengaluru • Lumière Draped Silk-Satin Midi Dress</span>
+              </div>
+              <span class="verified-tag">Verified</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>“Ordered matching outfits for myself and our 7-year-old son. Zero shrinkage after washes and super soft organic cotton.”</p>
+            <div class="review-author">
+              <div>
+                <strong>Rohan & Meera Nair</strong>
+                <span>New Delhi • Tactical Cargo Pants & Junior Hoodie</span>
+              </div>
+              <span class="verified-tag">Verified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER & CONTACT US -->
+  <section class="container section-pad-lg">
+    <div class="contact-newsletter-grid">
+      <div class="newsletter-box">
+        <span class="eyebrow">Private Access</span>
+        <h3>Join the THREADORA Circle</h3>
+        <p>Receive early access to limited capsule drops, private archive sales, and an instant 10% welcome privilege code.</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" id="newsletterEmail" required placeholder="Enter your email address" />
+          <button type="submit" class="btn btn-white">Subscribe</button>
+        </form>
+        <p id="newsletterFeedback" class="feedback-msg hidden">Welcome to THREADORA. Use code <strong>THREADORA10</strong> at checkout.</p>
+      </div>
+
+      <div class="contact-box">
+        <span class="eyebrow">Client Concierge</span>
+        <h3>Contact THREADORA</h3>
+        <p class="muted-text">Questions on sizing, styling, or corporate orders? Our stylists respond within 2 hours.</p>
+        <form id="contactForm" class="contact-form">
+          <div class="form-row-2">
+            <input type="text" required placeholder="Your Name" />
+            <input type="email" required placeholder="Email Address" />
+          </div>
+          <textarea rows="2" required placeholder="How can our styling team assist you?"></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <p id="contactFeedback" class="feedback-msg dark hidden">Thank you. A THREADORA Client Advisor has received your message.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-text">
+              <span class="brand-title">THREADORA</span>
+              <span class="brand-subtitle">Style Beyond Every Generation</span>
+            </div>
+          </div>
+          <p class="muted-text">
+            Architectural fashion crafted with sustainable fabrics and intelligent AI styling for Men, Women, and Kids.
+          </p>
+        </div>
+
+        <div>
+          <h4>Collections</h4>
+          <ul>
+            <li><a href="#catalog" data-nav="catalog" data-gender="Men">Men’s Streetwear & Tailoring</a></li>
+            <li><a href="#catalog" data-nav="catalog" data-gender="Women">Women’s Atelier</a></li>
+            <li><a href="#catalog" data-nav="catalog" data-gender="Kids">Kids’ Couture</a></li>
+            <li><a href="#new-arrivals">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>AI & Services</h4>
+          <ul>
+            <li><a href="#ai-style-studio">AI Style Studio</a></li>
+            <li><button type="button" id="footerOpenBag">Shopping Bag</button></li>
+            <li><button type="button" id="footerOpenWishlist">Saved Wishlist</button></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Flagship Studio</h4>
+          <ul>
+            <li>Level 3, Palladium Luxury Wing, Mumbai & Bengaluru</li>
+            <li>+91 (22) 4890-7700</li>
+            <li>concierge@threadora.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 THREADORA International Fashion House. All rights reserved.</span>
+        <span>Tagline: Style Beyond Every Generation.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PRODUCT QUICK VIEW MODAL -->
+  <div id="quickViewModal" class="modal-backdrop hidden">
+    <div class="modal-card quick-view-card">
+      <div class="qv-media">
+        <img id="qvImage" src="" alt="Product Preview" />
+      </div>
+      <div class="qv-details">
+        <div class="qv-top">
+          <span id="qvMeta" class="eyebrow"></span>
+          <button type="button" id="closeQvBtn" class="icon-btn">✕</button>
+        </div>
+        <h3 id="qvTitle" class="qv-title"></h3>
+        <div id="qvRating" class="qv-rating"></div>
+        <div class="qv-price-row">
+          <strong id="qvPrice"></strong>
+          <span id="qvOrigPrice" class="strike"></span>
+          <span id="qvDiscount" class="discount-pill"></span>
+        </div>
+        <p id="qvDesc" class="muted-text"></p>
+
+        <div class="qv-selector">
+          <span class="eyebrow-sm">Color: <strong id="qvSelectedColorName"></strong></span>
+          <div id="qvColorsContainer" class="option-pills"></div>
+        </div>
+
+        <div class="qv-selector">
+          <span class="eyebrow-sm">Select Size: <strong id="qvSelectedSizeName"></strong></span>
+          <div id="qvSizesContainer" class="option-pills"></div>
+        </div>
+
+        <div class="qv-qty-row">
+          <span class="eyebrow-sm">Quantity:</span>
+          <div class="qty-stepper">
+            <button type="button" id="qvMinusBtn">−</button>
+            <span id="qvQtyValue">1</span>
+            <button type="button" id="qvPlusBtn">+</button>
+          </div>
+        </div>
+
+        <div class="qv-actions">
+          <button type="button" id="qvAddToBagBtn" class="btn btn-primary full-width">Add to Bag</button>
+          <button type="button" id="qvWishlistBtn" class="btn btn-secondary">♥</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE-OVER SHOPPING BAG DRAWER -->
+  <div id="cartDrawerBackdrop" class="drawer-backdrop hidden">
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <h3>Shopping Bag (<span id="drawerCartCount">0</span>)</h3>
+        <button type="button" id="closeCartBtn" class="icon-btn">✕</button>
+      </div>
+      <div id="cartItemsContainer" class="drawer-body"></div>
+      <div id="cartFooter" class="drawer-footer hidden">
+        <div class="promo-input-row">
+          <input type="text" id="promoInput" placeholder="Promo code (try THREADORA10)" />
+          <button type="button" id="applyPromoBtn" class="btn btn-dark-sm">Apply</button>
+        </div>
+        <div class="totals-list">
+          <div><span>Bag Subtotal</span><span id="cartSubtotalVal">₹0</span></div>
+          <div><span>Collection Savings</span><span id="cartSavingsVal">− ₹0</span></div>
+          <div id="promoRow" class="hidden"><span>Code THREADORA10 (10%)</span><span id="promoDiscountVal">− ₹0</span></div>
+          <div><span>Express Shipping</span><strong>FREE</strong></div>
+          <div class="grand-total"><span>Total Payable</span><strong id="cartFinalTotalVal">₹0</strong></div>
+        </div>
+        <button type="button" id="openCheckoutBtn" class="btn btn-primary full-width">Proceed to Checkout →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE-OVER WISHLIST DRAWER -->
+  <div id="wishlistDrawerBackdrop" class="drawer-backdrop hidden">
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <h3>Saved Wishlist (<span id="drawerWishlistCount">0</span>)</h3>
+        <button type="button" id="closeWishlistBtn" class="icon-btn">✕</button>
+      </div>
+      <div id="wishlistItemsContainer" class="drawer-body"></div>
+    </div>
+  </div>
+
+  <!-- DEMO CHECKOUT MODAL -->
+  <div id="checkoutModal" class="modal-backdrop hidden">
+    <div class="modal-card checkout-card">
+      <div id="checkoutFormView">
+        <div class="qv-top">
+          <div>
+            <span class="eyebrow">Express Demo Checkout</span>
+            <h3 class="section-title-sm">Delivery & Payment</h3>
+          </div>
+          <button type="button" id="closeCheckoutBtn" class="icon-btn">✕</button>
+        </div>
+        <form id="demoCheckoutForm" class="checkout-form">
+          <div class="form-row-2">
+            <input type="text" id="chkName" required placeholder="Full Name" />
+            <input type="tel" required placeholder="Mobile Number" />
+          </div>
+          <input type="email" required placeholder="Email for Order Receipt" />
+          <input type="text" required placeholder="Street Address / Apartment" />
+          <div class="form-row-2">
+            <input type="text" required placeholder="City" />
+            <input type="text" required placeholder="PIN Code" />
+          </div>
+          <div class="payment-modes">
+            <span class="eyebrow-sm">Payment Mode (Demo)</span>
+            <div class="pm-grid">
+              <button type="button" class="pm-btn active">UPI / QR</button>
+              <button type="button" class="pm-btn">Credit / Debit Card</button>
+              <button type="button" class="pm-btn">Cash on Delivery</button>
+            </div>
+          </div>
+          <div class="checkout-total-row">
+            <span>Order Total</span>
+            <strong id="checkoutTotalDisplay">₹0</strong>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">Place Demo Order</button>
+        </form>
+      </div>
+
+      <div id="checkoutSuccessView" class="checkout-success hidden">
+        <div class="success-check">✓</div>
+        <span id="orderIdText" class="eyebrow">ORDER CONFIRMED</span>
+        <h3 id="thankYouTitle" class="section-title-sm">Thank You</h3>
+        <p id="orderSummaryMsg" class="muted-text"></p>
+        <div class="demo-note">Demo Checkout Completed — No real payment was charged.</div>
+        <button type="button" id="finishCheckoutBtn" class="btn btn-primary full-width">Continue Exploring THREADORA</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING TOAST NOTIFICATION -->
+  <div id="toastBanner" class="toast hidden">
+    <span class="toast-icon">✓</span>
+    <span id="toastText">Added to bag</span>
+  </div>
+
+  <!-- INTERACTIVE STOREFRONT SCRIPT -->
+  <script>
+    const PRODUCTS = [
+      { id: 'm-1', name: 'Atelier Heavyweight Oversized Hoodie', gender: 'Men', category: 'Oversized Hoodies', price: 3499, originalPrice: 4999, rating: 4.9, reviews: 342, isNew: true, isTrending: true, isBestSeller: true, sizes: ['S', 'M', 'L', 'XL', 'XXL'], colors: [{ name: 'Obsidian Black', hex: '#141414' }, { name: 'Heather Silver', hex: '#B8BCC2' }], occasions: ['Casual', 'College', 'Travel'], styles: ['Streetwear', 'Oversized', 'Korean'], image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=900&q=85', description: 'Crafted from 480 GSM loop-back organic French terry with drop-shoulder architecture and tonal silver metal aglets.' },
+      { id: 'm-2', name: 'Monolith Dropped-Shoulder Oversized Tee', gender: 'Men', category: 'Oversized T-Shirts', price: 1499, originalPrice: 2299, rating: 4.8, reviews: 518, isNew: true, isTrending: true, isBestSeller: true, sizes: ['S', 'M', 'L', 'XL', 'XXL'], colors: [{ name: 'Pure White', hex: '#FFFFFF' }, { name: 'Charcoal', hex: '#2B2B2B' }], occasions: ['Casual', 'College', 'Travel'], styles: ['Minimal', 'Oversized', 'Streetwear', 'Korean'], image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85', description: '260 GSM combed supima cotton jersey featuring a structured high-ribbed collar and contemporary boxy drape.' },
+      { id: 'm-3', name: 'Tactical Multi-Pocket Parachute Cargo Pants', gender: 'Men', category: 'Cargo Pants', price: 3299, originalPrice: 4599, rating: 4.9, reviews: 289, isNew: true, isTrending: true, isBestSeller: true, sizes: ['28', '30', '32', '34', '36'], colors: [{ name: 'Graphite Grey', hex: '#4B5056' }, { name: 'Jet Black', hex: '#121212' }], occasions: ['Casual', 'College', 'Travel'], styles: ['Streetwear', 'Oversized', 'Korean'], image: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=900&q=85', description: 'Technical cotton-nylon ripstop cargo trousers engineered with articulated knee pleats and adjustable ankle toggles.' },
+      { id: 'm-4', name: 'Studio Archive Graphic Street Tee', gender: 'Men', category: 'Graphic T-Shirts', price: 1699, originalPrice: 2499, rating: 4.7, reviews: 194, isNew: true, isTrending: true, isBestSeller: false, sizes: ['S', 'M', 'L', 'XL'], colors: [{ name: 'Vintage Onyx', hex: '#1E1E20' }, { name: 'Off White', hex: '#F6F5F0' }], occasions: ['Casual', 'College', 'Party'], styles: ['Streetwear', 'Oversized', 'Korean'], image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=900&q=85', description: 'High-density puff-print architectural typography over enzyme-washed heavyweight jersey.' },
+      { id: 'm-5', name: 'Nordic Fleece Crewneck Sweatshirt', gender: 'Men', category: 'Crewneck Sweatshirts', price: 2699, originalPrice: 3799, rating: 4.8, reviews: 231, isNew: false, isTrending: true, isBestSeller: true, sizes: ['S', 'M', 'L', 'XL', 'XXL'], colors: [{ name: 'Silver Ash', hex: '#C7CCD1' }, { name: 'Midnight Navy', hex: '#1A2436' }], occasions: ['Casual', 'College', 'Office', 'Travel'], styles: ['Minimal', 'Classic', 'Korean'], image: 'https://images.unsplash.com/photo-1614975059251-992f11792b9f?auto=format&fit=crop&w=900&q=85', description: 'Brushed-interior 420 GSM cotton fleece pullover with V-stitch collar reinforcement.' },
+      { id: 'm-6', name: 'Milanese Tailored Oxford Dress Shirt', gender: 'Men', category: 'Formal Shirts', price: 2899, originalPrice: 3999, rating: 4.9, reviews: 412, isNew: false, isTrending: false, isBestSeller: true, sizes: ['S', 'M', 'L', 'XL', 'XXL'], colors: [{ name: 'Crisp White', hex: '#FFFFFF' }, { name: 'Ice Blue', hex: '#D6E4F0' }], occasions: ['Office', 'Wedding', 'Party'], styles: ['Classic', 'Minimal', 'Luxury'], image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=900&q=85', description: 'Two-ply 100s European cotton weave with mother-of-pearl buttons and wrinkle-resistant finish.' },
+      { id: 'm-7', name: 'Seoul 90s Wide-Leg Baggy Denim Jeans', gender: 'Men', category: 'Baggy Jeans', price: 3599, originalPrice: 4899, rating: 4.8, reviews: 276, isNew: true, isTrending: true, isBestSeller: true, sizes: ['28', '30', '32', '34', '36'], colors: [{ name: 'Washed Indigo', hex: '#4A6482' }, { name: 'Faded Charcoal', hex: '#3B3D40' }], occasions: ['Casual', 'College', 'Travel'], styles: ['Streetwear', 'Korean', 'Oversized'], image: 'https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=85', description: '13.5 oz rigid non-stretch denim cut in a relaxed puddle-hem wide leg with silver hardware.' },
+      { id: 'm-8', name: 'Apex Urban Bomber & Tech Jacket', gender: 'Men', category: 'Jackets', price: 4999, originalPrice: 6999, rating: 4.9, reviews: 168, isNew: true, isTrending: true, isBestSeller: false, sizes: ['S', 'M', 'L', 'XL'], colors: [{ name: 'Matte Black', hex: '#141414' }, { name: 'Liquid Silver', hex: '#A5ABB3' }], occasions: ['Casual', 'Party', 'Travel', 'College'], styles: ['Streetwear', 'Luxury', 'Minimal'], image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=85', description: 'Water-repellent satin-weave outer shell with brushed chrome two-way zipper and quilted lining.' },
+      { id: 'm-9', name: 'Heritage Raw Selvedge Denim Jacket', gender: 'Men', category: 'Denim Jackets', price: 4299, originalPrice: 5799, rating: 4.8, reviews: 149, isNew: false, isTrending: true, isBestSeller: false, sizes: ['S', 'M', 'L', 'XL'], colors: [{ name: 'Classic Indigo', hex: '#2F486D' }, { name: 'Washed Black', hex: '#242526' }], occasions: ['Casual', 'College', 'Travel'], styles: ['Classic', 'Streetwear'], image: 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=900&q=85', description: '14 oz structured cotton denim trucker jacket with silver shank buttons.' },
+      { id: 'm-10', name: 'Sartorial Pleated Tailored Trousers', gender: 'Men', category: 'Trousers', price: 3199, originalPrice: 4499, rating: 4.8, reviews: 205, isNew: true, isTrending: false, isBestSeller: true, sizes: ['28', '30', '32', '34', '36'], colors: [{ name: 'Sharkskin Grey', hex: '#6E7278' }, { name: 'Obsidian', hex: '#171717' }], occasions: ['Office', 'Wedding', 'Party', 'Casual'], styles: ['Minimal', 'Korean', 'Classic', 'Luxury'], image: 'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=900&q=85', description: 'Fluid wool-viscose blend trousers featuring single front pleats and effortless tapered drape.' },
+      { id: 'm-11', name: 'Essential Tech-Fleece Zip-Up Hoodie', gender: 'Men', category: 'Zip-Up Hoodies', price: 3299, originalPrice: 4499, rating: 4.7, reviews: 183, isNew: false, isTrending: true, isBestSeller: false, sizes: ['S', 'M', 'L', 'XL', 'XXL'], colors: [{ name: 'Cloud Grey', hex: '#D3D6DB' }, { name: 'Carbon Black', hex: '#1A1A1A' }], occasions: ['Casual', 'Travel', 'College'], styles: ['Streetwear', 'Minimal'], image: 'https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?auto=format&fit=crop&w=900&q=85', description: 'Double-knit spacer fleece engineered for lightweight warmth and sleek matte silver zip hardware.' },
+      { id: 'm-12', name: 'Riviera Mercerized Knit Polo T-Shirt', gender: 'Men', category: 'Polo T-Shirts', price: 2299, originalPrice: 3199, rating: 4.8, reviews: 164, isNew: true, isTrending: false, isBestSeller: true, sizes: ['S', 'M', 'L', 'XL'], colors: [{ name: 'Ivory Cream', hex: '#F3EFE6' }, { name: 'Onyx', hex: '#18181B' }], occasions: ['Office', 'Casual', 'Party', 'Travel'], styles: ['Classic', 'Luxury', 'Minimal'], image: 'https://images.unsplash.com/photo-1626497764746-6dc36546b388?auto=format&fit=crop&w=900&q=85', description: 'Fine-gauge breathable cotton-silk pique polo with johnny collar neckline.' },
+      { id: 'm-13', name: 'Tapered Sculpt Knit Joggers', gender: 'Men', category: 'Joggers', price: 2399, originalPrice: 3299, rating: 4.7, reviews: 247, isNew: false, isTrending: false, isBestSeller: true, sizes: ['S', 'M', 'L', 'XL', 'XXL'], colors: [{ name: 'Heather Grey', hex: '#9CA3AF' }, { name: 'Black', hex: '#111111' }], occasions: ['Casual', 'Travel', 'College'], styles: ['Minimal', 'Streetwear'], image: 'https://images.unsplash.com/photo-1584865288642-42078afe6942?auto=format&fit=crop&w=900&q=85', description: 'Interlock cotton-modal joggers with zippered welt pockets and tailored athletic taper.' },
+      { id: 'm-14', name: 'Brushed Linen-Cotton Resort Casual Shirt', gender: 'Men', category: 'Casual Shirts', price: 2499, originalPrice: 3499, rating: 4.8, reviews: 192, isNew: true, isTrending: true, isBestSeller: false, sizes: ['S', 'M', 'L', 'XL'], colors: [{ name: 'Pure White', hex: '#FFFFFF' }, { name: 'Sandstone', hex: '#D8CFC2' }], occasions: ['Casual', 'Travel', 'Party'], styles: ['Minimal', 'Classic', 'Korean'], image: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=900&q=85', description: 'Airy European flax-cotton blend shirt with relaxed Cuban-inspired drape.' },
+      { id: 'm-15', name: 'Sculpted Slim-Fit Stretch Denim Jeans', gender: 'Men', category: 'Slim-Fit Jeans', price: 2999, originalPrice: 4199, rating: 4.7, reviews: 310, isNew: false, isTrending: false, isBestSeller: true, sizes: ['28', '30', '32', '34', '36'], colors: [{ name: 'Dark Rinse', hex: '#1E293B' }, { name: 'Pitch Black', hex: '#0F0F0F' }], occasions: ['Casual', 'Office', 'Party'], styles: ['Classic', 'Minimal'], image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=85', description: '360-degree recovery stretch cotton denim tailored close through the thigh.' },
+      { id: 'm-16', name: 'Supima Core Essential Plain T-Shirt', gender: 'Men', category: 'Plain T-Shirts', price: 1199, originalPrice: 1799, rating: 4.8, reviews: 620, isNew: false, isTrending: false, isBestSeller: true, sizes: ['S', 'M', 'L', 'XL', 'XXL'], colors: [{ name: 'Optic White', hex: '#FFFFFF' }, { name: 'Obsidian', hex: '#141414' }], occasions: ['Casual', 'Office', 'Travel', 'College'], styles: ['Minimal', 'Classic'], image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=900&q=85', description: 'Extra-long staple Supima cotton tee with silk-protein wash for lasting luster.' },
+      { id: 'm-17', name: 'Monochrome Waffle Co-ord Shirt & Pant Set', gender: 'Men', category: 'Co-ord Sets', price: 4499, originalPrice: 6299, rating: 4.9, reviews: 138, isNew: true, isTrending: true, isBestSeller: false, sizes: ['S', 'M', 'L', 'XL'], colors: [{ name: 'Silver Stone', hex: '#C8C6C1' }, { name: 'Charcoal Slate', hex: '#34373B' }], occasions: ['Travel', 'Casual', 'Party'], styles: ['Korean', 'Luxury', 'Minimal', 'Oversized'], image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=900&q=85', description: 'Matching relaxed-fit textured overshirt and drawstring wide trousers.' },
+      { id: 'm-18', name: 'Regent Silk-Blend Jacquard Bandhgala Set', gender: 'Men', category: 'Ethnic Wear', price: 6999, originalPrice: 9999, rating: 4.9, reviews: 112, isNew: true, isTrending: false, isBestSeller: false, sizes: ['S', 'M', 'L', 'XL'], colors: [{ name: 'Ivory Silver', hex: '#EAE8E3' }, { name: 'Midnight Noir', hex: '#16181D' }], occasions: ['Wedding', 'Party'], styles: ['Luxury', 'Classic'], image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85', description: 'Contemporary architectural mandarin-collar kurta & tailored trouser ensemble.' },
+      { id: 'm-19', name: 'Savile Double-Breasted Structured Blazer', gender: 'Men', category: 'Formal Wear', price: 7499, originalPrice: 10499, rating: 4.9, reviews: 95, isNew: false, isTrending: true, isBestSeller: false, sizes: ['S', 'M', 'L', 'XL'], colors: [{ name: 'Anthracite', hex: '#2D3035' }, { name: 'Pearl Grey', hex: '#B9BDC2' }], occasions: ['Office', 'Wedding', 'Party'], styles: ['Luxury', 'Classic'], image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=85', description: 'Half-canvassed Italian-inspired blazer featuring sharp peak lapels.' },
+      { id: 'm-20', name: 'Signature Poplin Satin-Finish Evening Shirt', gender: 'Men', category: 'Premium Shirts', price: 3399, originalPrice: 4699, rating: 4.8, reviews: 141, isNew: true, isTrending: false, isBestSeller: false, sizes: ['S', 'M', 'L', 'XL'], colors: [{ name: 'Noir Black', hex: '#111111' }, { name: 'Alabaster White', hex: '#F9F9F9' }], occasions: ['Party', 'Wedding', 'Office'], styles: ['Luxury', 'Minimal'], image: 'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=900&q=85', description: 'Lustrous long-staple cotton poplin featuring concealed placket and French cuffs.' },
+
+      // WOMEN
+      { id: 'w-1', name: 'Lumière Draped Silk-Satin Midi Dress', gender: 'Women', category: 'Dresses', price: 4599, originalPrice: 6499, rating: 4.9, reviews: 284, isNew: true, isTrending: true, isBestSeller: true, sizes: ['XS', 'S', 'M', 'L', 'XL'], colors: [{ name: 'Champagne Silver', hex: '#DCD8D0' }, { name: 'Noir', hex: '#141414' }], occasions: ['Party', 'Wedding'], styles: ['Luxury', 'Minimal'], image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=85', description: 'Bias-cut liquid satin dress with fluid cowl neckline and luminous pearl-silver sheen.' },
+      { id: 'w-2', name: 'Élan Pleated Resort Maxi Dress', gender: 'Women', category: 'Maxi Dresses', price: 4899, originalPrice: 6799, rating: 4.8, reviews: 196, isNew: true, isTrending: true, isBestSeller: false, sizes: ['XS', 'S', 'M', 'L'], colors: [{ name: 'Ivory Pearl', hex: '#F4F1EA' }, { name: 'Dove Grey', hex: '#B4B7BC' }], occasions: ['Wedding', 'Party', 'Travel'], styles: ['Luxury', 'Classic', 'Minimal'], image: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=900&q=85', description: 'Sunray-pleated georgette maxi silhouette with cinched waist sash.' },
+      { id: 'w-3', name: 'Tokyo High-Waist Wide-Leg Denim Jeans', gender: 'Women', category: 'Wide-Leg Jeans', price: 3399, originalPrice: 4699, rating: 4.9, reviews: 356, isNew: true, isTrending: true, isBestSeller: true, sizes: ['26', '28', '30', '32', '34'], colors: [{ name: 'Light Vintage Blue', hex: '#8FA8C2' }, { name: 'Washed Black', hex: '#262729' }], occasions: ['Casual', 'College', 'Travel'], styles: ['Korean', 'Streetwear', 'Minimal', 'Oversized'], image: 'https://images.unsplash.com/photo-1582418702059-97ebafb35d09?auto=format&fit=crop&w=900&q=85', description: 'Flattering ultra-high rise waist paired with an elongated wide-leg silhouette.' },
+      { id: 'w-4', name: 'Sculpt Ribbed Studio Crop Top', gender: 'Women', category: 'Crop Tops', price: 1399, originalPrice: 1999, rating: 4.8, reviews: 410, isNew: false, isTrending: true, isBestSeller: true, sizes: ['XS', 'S', 'M', 'L'], colors: [{ name: 'Optic White', hex: '#FFFFFF' }, { name: 'Jet Black', hex: '#141414' }], occasions: ['Casual', 'College', 'Party'], styles: ['Minimal', 'Korean', 'Streetwear'], image: 'https://images.unsplash.com/photo-1551163943-3f6a855d1153?auto=format&fit=crop&w=900&q=85', description: 'Double-layered micro-modal stretch knit crop top offering opaque support.' },
+      { id: 'w-5', name: 'Parisian Poplin Oversized Crisp Shirt', gender: 'Women', category: 'Shirts', price: 2599, originalPrice: 3599, rating: 4.8, reviews: 229, isNew: true, isTrending: false, isBestSeller: true, sizes: ['XS', 'S', 'M', 'L', 'XL'], colors: [{ name: 'Crisp White', hex: '#FFFFFF' }, { name: 'Sky Stripe', hex: '#C6D9EA' }], occasions: ['Office', 'Casual', 'College'], styles: ['Minimal', 'Classic', 'Oversized', 'Korean'], image: 'https://images.unsplash.com/photo-1564257631407-4deb1f99d992?auto=format&fit=crop&w=900&q=85', description: 'Borrowed-from-the-boys relaxed poplin shirt with deep cuffs.' },
+      { id: 'w-6', name: 'Cloud-Soft Boxy Cropped Fleece Hoodie', gender: 'Women', category: 'Hoodies', price: 2999, originalPrice: 4199, rating: 4.9, reviews: 274, isNew: true, isTrending: true, isBestSeller: true, sizes: ['XS', 'S', 'M', 'L'], colors: [{ name: 'Pearl Grey', hex: '#D4D6DA' }, { name: 'Onyx', hex: '#181818' }], occasions: ['Casual', 'College', 'Travel'], styles: ['Streetwear', 'Oversized', 'Korean'], image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85', description: '450 GSM brushed organic fleece hoodie cut in a modern boxy crop.' },
+      { id: 'w-7', name: 'Noir Tailored Cropped Tweed Jacket', gender: 'Women', category: 'Jackets', price: 4799, originalPrice: 6599, rating: 4.9, reviews: 152, isNew: true, isTrending: true, isBestSeller: false, sizes: ['XS', 'S', 'M', 'L'], colors: [{ name: 'Silver Noir', hex: '#28292C' }, { name: 'Ivory Bouclé', hex: '#EFECE6' }], occasions: ['Office', 'Party', 'Wedding'], styles: ['Luxury', 'Classic', 'Korean'], image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=900&q=85', description: 'Textured bouclé tweed jacket accented with brushed silver crest buttons.' },
+      { id: 'w-8', name: 'Aurelia Metallic-Thread Chanderi Kurti Set', gender: 'Women', category: 'Kurtis', price: 3699, originalPrice: 5199, rating: 4.9, reviews: 215, isNew: true, isTrending: false, isBestSeller: true, sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'], colors: [{ name: 'Moonlight Silver', hex: '#E2E4E8' }, { name: 'Rose Ash', hex: '#D6C2C4' }], occasions: ['Wedding', 'Party', 'Office'], styles: ['Luxury', 'Classic'], image: 'https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=900&q=85', description: 'Handloom-inspired silk-chanderi straight kurti paired with matching cigarette pants.' },
+
+      // KIDS
+      { id: 'k-1', name: 'Junior Urban Fleece Pullover Hoodie', gender: 'Kids', ageGroup: 'Kids 5-8Y', category: 'Hoodies', price: 1699, originalPrice: 2399, rating: 4.9, reviews: 148, isNew: true, isTrending: true, isBestSeller: true, sizes: ['2-3Y', '4-5Y', '6-7Y', '8-9Y', '10-12Y'], colors: [{ name: 'Heather Silver', hex: '#C4C8CE' }, { name: 'Jet Black', hex: '#1A1A1A' }], occasions: ['Casual', 'College', 'Travel'], styles: ['Streetwear', 'Minimal', 'Oversized'], image: 'https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=85', description: 'Hypoallergenic 100% organic brushed cotton fleece hoodie with gentle ribbed cuffs.' },
+      { id: 'k-2', name: 'Little Couture Tulle & Cotton Party Dress', gender: 'Kids', ageGroup: 'Toddlers 2-4Y', category: "Girls' Dresses", price: 2199, originalPrice: 3099, rating: 4.9, reviews: 176, isNew: true, isTrending: true, isBestSeller: true, sizes: ['2-3Y', '4-5Y', '6-7Y', '8-9Y'], colors: [{ name: 'Pearl White', hex: '#F7F6F2' }, { name: 'Silver Mist', hex: '#D3D7DD' }], occasions: ['Party', 'Wedding'], styles: ['Classic', 'Luxury'], image: 'https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?auto=format&fit=crop&w=900&q=85', description: 'Soft breathable cotton-lined bodice layered with floaty shimmer tulle skirt.' },
+      { id: 'k-3', name: 'Active Play Organic Cotton Graphic Tee', gender: 'Kids', ageGroup: 'Kids 5-8Y', category: "Boys' T-Shirts", price: 999, originalPrice: 1499, rating: 4.8, reviews: 212, isNew: false, isTrending: false, isBestSeller: true, sizes: ['2-3Y', '4-5Y', '6-7Y', '8-9Y', '10-12Y'], colors: [{ name: 'Optic White', hex: '#FFFFFF' }, { name: 'Slate Grey', hex: '#646A73' }], occasions: ['Casual', 'Travel'], styles: ['Minimal', 'Streetwear'], image: 'https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=900&q=85', description: 'Pre-shrunk combed organic cotton jersey t-shirt built for all-day movement.' },
+      { id: 'k-4', name: 'Junior Smart Oxford Button-Down Shirt', gender: 'Kids', ageGroup: 'Tweens 9-12Y', category: "Boys' Shirts", price: 1499, originalPrice: 2099, rating: 4.8, reviews: 119, isNew: true, isTrending: false, isBestSeller: false, sizes: ['4-5Y', '6-7Y', '8-9Y', '10-12Y'], colors: [{ name: 'Crisp White', hex: '#FFFFFF' }, { name: 'Ice Blue', hex: '#D2E2F0' }], occasions: ['Party', 'Wedding', 'Casual'], styles: ['Classic', 'Minimal'], image: 'https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=900&q=85', description: 'Soft-washed breathable cotton Oxford shirt tailored for family occasions.' },
+      { id: 'k-5', name: 'Flex-Waist Comfort Tapered Kids Jeans', gender: 'Kids', ageGroup: 'Tweens 9-12Y', category: 'Jeans', price: 1799, originalPrice: 2499, rating: 4.7, reviews: 134, isNew: false, isTrending: true, isBestSeller: false, sizes: ['4-5Y', '6-7Y', '8-9Y', '10-12Y'], colors: [{ name: 'Medium Wash', hex: '#5D7794' }, { name: 'Charcoal Denim', hex: '#34363A' }], occasions: ['Casual', 'Travel'], styles: ['Classic', 'Streetwear'], image: 'https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?auto=format&fit=crop&w=900&q=85', description: 'Super-soft stretch cotton denim featuring an internal adjustable elastic waistband.' },
+      { id: 'k-6', name: 'Cozy Two-Piece Sweatshirt & Jogger Set', gender: 'Kids', ageGroup: 'Toddlers 2-4Y', category: 'Casual Sets', price: 2099, originalPrice: 2899, rating: 4.9, reviews: 162, isNew: true, isTrending: true, isBestSeller: true, sizes: ['2-3Y', '4-5Y', '6-7Y', '8-9Y'], colors: [{ name: 'Oatmeal Grey', hex: '#DBD8D0' }, { name: 'Silver Sage', hex: '#AEB7B2' }], occasions: ['Casual', 'Travel'], styles: ['Minimal', 'Korean'], image: 'https://images.unsplash.com/photo-1522771930-78848d9293e8?auto=format&fit=crop&w=900&q=85', description: 'Coordinated French-terry crewneck sweatshirt and elastic-waist joggers.' }
+    ];
+
+    const MENS_CATEGORIES = ['All', 'Oversized T-Shirts', 'Graphic T-Shirts', 'Plain T-Shirts', 'Premium Shirts', 'Casual Shirts', 'Formal Shirts', 'Hoodies', 'Oversized Hoodies', 'Zip-Up Hoodies', 'Sweatshirts', 'Crewneck Sweatshirts', 'Jackets', 'Denim Jackets', 'Cargo Pants', 'Joggers', 'Baggy Jeans', 'Slim-Fit Jeans', 'Trousers', 'Polo T-Shirts', 'Co-ord Sets', 'Casual Wear', 'Formal Wear', 'Ethnic Wear'];
+    const WOMENS_CATEGORIES = ['All', 'Dresses', 'Maxi Dresses', 'Mini Dresses', 'Casual Tops', 'Crop Tops', 'Oversized T-Shirts', 'Hoodies', 'Sweatshirts', 'Shirts', 'Jeans', 'Wide-Leg Jeans', 'Cargo Pants', 'Leggings', 'Skirts', 'Co-ord Sets', 'Kurtis', 'Ethnic Wear', 'Jackets', 'Cardigans', 'Party Wear'];
+    const KIDS_CATEGORIES = ['All', "Boys' T-Shirts", "Boys' Shirts", 'Hoodies', 'Sweatshirts', 'Jeans', "Girls' Dresses", 'Tops', 'Casual Sets', 'Jackets', 'Everyday Wear'];
+
+    const CATEGORY_ALIASES = {
+      'Hoodies': ['Hoodies', 'Oversized Hoodies', 'Zip-Up Hoodies'],
+      'Sweatshirts': ['Sweatshirts', 'Crewneck Sweatshirts'],
+      'Casual Wear': ['Oversized T-Shirts', 'Graphic T-Shirts', 'Plain T-Shirts', 'Casual Shirts', 'Cargo Pants', 'Joggers', 'Baggy Jeans', 'Co-ord Sets'],
+      'Formal Wear': ['Formal Shirts', 'Premium Shirts', 'Trousers', 'Formal Wear'],
+      'Casual Tops': ['Crop Tops', 'Oversized T-Shirts', 'Shirts'],
+      'Jeans': ['Wide-Leg Jeans', 'Baggy Jeans', 'Slim-Fit Jeans', 'Jeans'],
+      'Ethnic Wear': ['Ethnic Wear', 'Kurtis'],
+      'Party Wear': ['Dresses', 'Maxi Dresses', 'Jackets', 'Premium Shirts'],
+      'Everyday Wear': ["Boys' T-Shirts", 'Hoodies', 'Casual Sets', 'Jeans'],
+      'Tops': ["Boys' T-Shirts", 'Casual Sets']
+    };
+
+    const state = {
+      gender: 'All',
+      category: 'All',
+      ageGroup: 'All Ages',
+      size: 'All',
+      color: 'All',
+      maxPrice: 11000,
+      tag: 'All',
+      sort: 'featured',
+      search: '',
+      aiGender: 'Men',
+      aiOccasion: 'Casual',
+      aiStyle: 'Streetwear',
+      aiCategory: 'Any',
+      aiBudget: 'All',
+      promoApplied: false,
+      cart: JSON.parse(localStorage.getItem('threadora_html_cart') || '[]'),
+      wishlist: JSON.parse(localStorage.getItem('threadora_html_wish') || '["m-1","w-1"]'),
+      qvProduct: null,
+      qvSize: '',
+      qvColor: '',
+      qvQty: 1
+    };
+
+    const formatINR = (n) => '₹' + Number(n).toLocaleString('en-IN');
+
+    function saveStorage() {
+      localStorage.setItem('threadora_html_cart', JSON.stringify(state.cart));
+      localStorage.setItem('threadora_html_wish', JSON.stringify(state.wishlist));
+      updateBadges();
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastBanner');
+      document.getElementById('toastText').textContent = msg;
+      toast.classList.remove('hidden');
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(() => toast.classList.add('hidden'), 3000);
+    }
+
+    function updateBadges() {
+      const totalItems = state.cart.reduce((sum, i) => sum + i.quantity, 0);
+      document.getElementById('cartBadge').textContent = totalItems;
+      document.getElementById('drawerCartCount').textContent = totalItems;
+      document.getElementById('wishlistBadge').textContent = state.wishlist.length;
+      document.getElementById('drawerWishlistCount').textContent = state.wishlist.length;
+    }
+
+    function createProductCardHTML(p) {
+      const discount = Math.round(((p.originalPrice - p.price) / p.originalPrice) * 100);
+      const isWished = state.wishlist.includes(p.id);
+      const swatches = p.colors.map(c => `<span class="swatch-dot" title="${c.name}" style="background:${c.hex}"></span>`).join('');
+      return `
+        <article class="product-card" data-id="${p.id}">
+          <div class="card-media" onclick="openQuickView('${p.id}')">
+            <img src="${p.image}" alt="${p.name}" loading="lazy" />
+            <div class="card-badges">
+              ${p.isNew ? '<span class="badge-new">New</span>' : ''}
+              ${p.isTrending ? '<span class="badge-trend">Trending</span>' : ''}
+            </div>
+            <div class="card-actions-top">
+              <button type="button" class="circle-icon ${isWished ? 'active' : ''}" onclick="event.stopPropagation(); toggleWishlist('${p.id}')" aria-label="Wishlist">♥</button>
+              <button type="button" class="circle-icon" onclick="event.stopPropagation(); openQuickView('${p.id}')" aria-label="Quick View">👁</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta-row">
+              <span class="card-cat">${p.gender} • ${p.category}</span>
+              <span class="card-rating">★ ${p.rating} (${p.reviews})</span>
+            </div>
+            <h3 class="card-title" onclick="openQuickView('${p.id}')">${p.name}</h3>
+            <div class="swatch-row">${swatches} <span class="swatch-count">${p.colors.length} Colors</span></div>
+            <div class="card-footer">
+              <div class="price-row">
+                <div>
+                  <strong class="price-now">${formatINR(p.price)}</strong>
+                  <span class="price-old">${formatINR(p.originalPrice)}</span>
+                </div>
+                <span class="discount-pill">${discount}% OFF</span>
+              </div>
+              <button type="button" class="btn-add-bag" onclick="addToCart('${p.id}')">Add to Bag</button>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderCategoryPills() {
+      const container = document.getElementById('categoryPillsContainer');
+      const title = document.getElementById('categoryBarTitle');
+      let list = ['All', 'Oversized Hoodies', 'Oversized T-Shirts', 'Cargo Pants', 'Baggy Jeans', 'Crewneck Sweatshirts', 'Formal Shirts', 'Jackets', 'Dresses', 'Wide-Leg Jeans', 'Co-ord Sets', 'Kurtis', "Girls' Dresses", 'Casual Sets'];
+      if (state.gender === 'Men') {
+        list = MENS_CATEGORIES;
+        title.textContent = 'Men’s Categories (23 Styles)';
+      } else if (state.gender === 'Women') {
+        list = WOMENS_CATEGORIES;
+        title.textContent = 'Women’s Categories (20 Styles)';
+      } else if (state.gender === 'Kids') {
+        list = KIDS_CATEGORIES;
+        title.textContent = 'Kids’ Categories';
+      } else {
+        title.textContent = 'Popular Categories';
+      }
+
+      container.innerHTML = list.map(cat => `
+        <button type="button" class="cat-pill ${state.category === cat ? 'active' : ''}" onclick="selectCategory('${cat.replace(/'/g, "\\'")}')">${cat}</button>
+      `).join('');
+    }
+
+    function renderCatalog() {
+      const kidsBar = document.getElementById('kidsAgeBar');
+      kidsBar.classList.toggle('hidden', state.gender !== 'Kids');
+
+      document.getElementById('catalogHeading').textContent = state.gender === 'All' ? 'Curated Collections' : `${state.gender}’s Fashion`;
+
+      let filtered = PRODUCTS.filter(p => {
+        if (state.gender !== 'All' && p.gender !== state.gender) return false;
+        if (state.gender === 'Kids' && state.ageGroup !== 'All Ages' && p.ageGroup !== state.ageGroup) return false;
+        if (state.category !== 'All') {
+          const allowed = CATEGORY_ALIASES[state.category] || [state.category];
+          if (!allowed.includes(p.category)) return false;
+        }
+        if (state.size !== 'All' && !p.sizes.includes(state.size)) return false;
+        if (state.color !== 'All' && !p.colors.some(c => c.name.toLowerCase().includes(state.color.toLowerCase()))) return false;
+        if (p.price > state.maxPrice) return false;
+        if (state.tag === 'New' && !p.isNew) return false;
+        if (state.tag === 'Trending' && !p.isTrending) return false;
+        if (state.tag === 'BestSeller' && !p.isBestSeller) return false;
+        if (state.search.trim()) {
+          const q = state.search.toLowerCase();
+          if (!p.name.toLowerCase().includes(q) && !p.category.toLowerCase().includes(q) && !p.description.toLowerCase().includes(q)) return false;
+        }
+        return true;
+      });
+
+      if (state.sort === 'price-asc') filtered.sort((a, b) => a.price - b.price);
+      if (state.sort === 'price-desc') filtered.sort((a, b) => b.price - a.price);
+      if (state.sort === 'popularity') filtered.sort((a, b) => b.reviews - a.reviews);
+      if (state.sort === 'rating') filtered.sort((a, b) => b.rating - a.rating);
+
+      document.getElementById('catalogCountText').textContent = `Showing ${filtered.length} authentic garments with verified studio photography`;
+      const grid = document.getElementById('mainCatalogGrid');
+      if (filtered.length === 0) {
+        grid.innerHTML = `<div class="empty-state"><h3>No garments matched your filter combination</h3><p>Try widening your price range or resetting filters.</p></div>`;
+      } else {
+        grid.innerHTML = filtered.map(createProductCardHTML).join('');
+      }
+    }
+
+    function renderStaticSections() {
+      document.getElementById('newArrivalsGrid').innerHTML = PRODUCTS.filter(p => p.isNew).slice(0, 4).map(createProductCardHTML).join('');
+      document.getElementById('trendingGrid').innerHTML = PRODUCTS.filter(p => p.isBestSeller).slice(0, 4).map(createProductCardHTML).join('');
+    }
+
+    function renderAIStudio() {
+      const pool = PRODUCTS.filter(p => p.gender === state.aiGender);
+      const scored = pool.map(item => {
+        let score = 0;
+        if (item.occasions.includes(state.aiOccasion)) score += 4;
+        if (item.styles.includes(state.aiStyle)) score += 4;
+        if (state.aiCategory !== 'Any' && item.category.toLowerCase().includes(state.aiCategory.toLowerCase())) score += 5;
+        if (state.aiBudget === 'Under ₹2,000' && item.price <= 2000) score += 3;
+        if (state.aiBudget === '₹2,000 - ₹4,500' && item.price >= 2000 && item.price <= 4500) score += 3;
+        if (state.aiBudget === '₹4,500+' && item.price >= 4500) score += 3;
+        return { item, score };
+      }).sort((a, b) => b.score - a.score);
+
+      const top4 = scored.slice(0, 4).map(s => s.item);
+      document.getElementById('aiMatchesHeading').textContent = `Top Individual Matches for ${state.aiGender} • ${state.aiStyle} (${state.aiOccasion})`;
+      document.getElementById('aiMatchesGrid').innerHTML = top4.map(createProductCardHTML).join('');
+
+      let title = 'Urban Utility Streetwear Combination';
+      let sub = 'Oversized Hoodie + Cargo Pants • Heavyweight French terry paired with ripstop cargos';
+      let ids = ['m-1', 'm-3'];
+
+      if (state.aiGender === 'Men') {
+        if (state.aiOccasion === 'Office' || state.aiOccasion === 'Wedding' || state.aiStyle === 'Classic' || state.aiStyle === 'Luxury') {
+          title = 'Modern Executive Tailored Ensemble';
+          sub = 'Formal Shirt + Pleated Trousers • Sharp architectural lines for elevated settings';
+          ids = ['m-6', 'm-10'];
+        } else if (state.aiStyle === 'Korean' || state.aiStyle === 'Oversized') {
+          title = 'Seoul Street-Minimal Layered Set';
+          sub = 'Oversized T-Shirt + Baggy Jeans • Effortless 90s drape with crisp silver contrast';
+          ids = ['m-2', 'm-7'];
+        } else if (state.aiOccasion === 'Travel') {
+          title = 'First-Class Transit Athleisure Duo';
+          sub = 'Crewneck Sweatshirt + Tapered Joggers • Plush 420 GSM fleece engineered for comfort';
+          ids = ['m-5', 'm-13'];
+        }
+      } else if (state.aiGender === 'Women') {
+        if (state.aiOccasion === 'Party' || state.aiOccasion === 'Wedding' || state.aiStyle === 'Luxury') {
+          title = 'Evening Atelier Satin & Tweed Pairing';
+          sub = 'Silk-Satin Midi Dress + Cropped Tweed Jacket • Luminous champagne-silver sophistication';
+          ids = ['w-1', 'w-7'];
+        } else {
+          title = 'Off-Duty Editorial Denim & Knit Look';
+          sub = 'Sculpt Crop Top + High-Waist Wide-Leg Jeans • Clean waist definition with fluid denim volume';
+          ids = ['w-4', 'w-3'];
+        }
+      } else {
+        title = 'All-Day Play Fleece & Denim Set';
+        sub = 'Junior Fleece Hoodie + Flex-Waist Jeans • Soft organic cotton built for active days';
+        ids = ['k-1', 'k-5'];
+      }
+
+      const outfitItems = ids.map(id => PRODUCTS.find(p => p.id === id)).filter(Boolean);
+      window.__currentOutfitIds = ids;
+      document.getElementById('aiOutfitTitle').textContent = title;
+      document.getElementById('aiOutfitSubtitle').textContent = sub;
+      document.getElementById('aiOutfitTotalPrice').textContent = formatINR(outfitItems.reduce((s, i) => s + i.price, 0));
+
+      document.getElementById('aiOutfitPiecesGrid').innerHTML = outfitItems.map((item, idx) => `
+        <div class="ai-piece-card" onclick="openQuickView('${item.id}')">
+          <img src="${item.image}" alt="${item.name}" />
+          <div>
+            <span class="piece-tag">Piece 0${idx + 1} • ${item.category}</span>
+            <h4>${item.name}</h4>
+            <p class="muted-text">${item.description}</p>
+            <div class="piece-bottom">
+              <strong>${formatINR(item.price)}</strong>
+              <button type="button" class="text-link" onclick="event.stopPropagation(); addToCart('${item.id}')">+ Add Piece</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    window.selectCategory = function(cat) {
+      state.category = cat;
+      renderCategoryPills();
+      renderCatalog();
+    };
+
+    window.addToCart = function(productId, size = null, color = null, qty = 1) {
+      const p = PRODUCTS.find(x => x.id === productId);
+      if (!p) return;
+      const chosenSize = size || p.sizes[0];
+      const chosenColor = color || p.colors[0].name;
+      const existing = state.cart.find(i => i.id === p.id && i.size === chosenSize && i.color === chosenColor);
+      if (existing) {
+        existing.quantity += qty;
+      } else {
+        state.cart.push({ id: p.id, name: p.name, price: p.price, originalPrice: p.originalPrice, image: p.image, size: chosenSize, color: chosenColor, quantity: qty });
+      }
+      saveStorage();
+      renderCartDrawer();
+      showToast(`Added "${p.name}" (${chosenSize}) to your bag`);
+    };
+
+    window.toggleWishlist = function(productId) {
+      const p = PRODUCTS.find(x => x.id === productId);
+      if (!p) return;
+      const idx = state.wishlist.indexOf(productId);
+      if (idx > -1) {
+        state.wishlist.splice(idx, 1);
+        showToast(`Removed "${p.name}" from wishlist`);
+      } else {
+        state.wishlist.push(productId);
+        showToast(`Saved "${p.name}" to wishlist`);
+      }
+      saveStorage();
+      renderCatalog();
+      renderStaticSections();
+      renderAIStudio();
+      renderWishlistDrawer();
+    };
+
+    window.openQuickView = function(productId) {
+      const p = PRODUCTS.find(x => x.id === productId);
+      if (!p) return;
+      state.qvProduct = p;
+      state.qvSize = p.sizes[0];
+      state.qvColor = p.colors[0].name;
+      state.qvQty = 1;
+
+      document.getElementById('qvImage').src = p.image;
+      document.getElementById('qvMeta').textContent = `${p.gender} • ${p.category}`;
+      document.getElementById('qvTitle').textContent = p.name;
+      document.getElementById('qvRating').textContent = `★ ${p.rating} (${p.reviews} verified reviews)`;
+      document.getElementById('qvPrice').textContent = formatINR(p.price);
+      document.getElementById('qvOrigPrice').textContent = formatINR(p.originalPrice);
+      document.getElementById('qvDiscount').textContent = `Save ${formatINR(p.originalPrice - p.price)}`;
+      document.getElementById('qvDesc').textContent = p.description;
+      document.getElementById('qvQtyValue').textContent = '1';
+
+      renderQvOptions();
+      document.getElementById('quickViewModal').classList.remove('hidden');
+    };
+
+    function renderQvOptions() {
+      const p = state.qvProduct;
+      if (!p) return;
+      document.getElementById('qvSelectedColorName').textContent = state.qvColor;
+      document.getElementById('qvSelectedSizeName').textContent = state.qvSize;
+
+      document.getElementById('qvColorsContainer').innerHTML = p.colors.map(c => `
+        <button type="button" class="opt-pill ${state.qvColor === c.name ? 'active' : ''}" onclick="state.qvColor='${c.name}'; renderQvOptions()">
+          <span class="swatch-dot" style="background:${c.hex}"></span> ${c.name}
+        </button>
+      `).join('');
+
+      document.getElementById('qvSizesContainer').innerHTML = p.sizes.map(sz => `
+        <button type="button" class="opt-pill ${state.qvSize === sz ? 'active' : ''}" onclick="state.qvSize='${sz}'; renderQvOptions()">${sz}</button>
+      `).join('');
+    }
+
+    function renderCartDrawer() {
+      const body = document.getElementById('cartItemsContainer');
+      const footer = document.getElementById('cartFooter');
+      if (state.cart.length === 0) {
+        footer.classList.add('hidden');
+        body.innerHTML = `<div class="empty-drawer"><h4>Your THREADORA bag is empty</h4><p>Explore our collections or try the AI Style Studio.</p></div>`;
+        return;
+      }
+      footer.classList.remove('hidden');
+      body.innerHTML = state.cart.map((item, idx) => `
+        <div class="drawer-item">
+          <img src="${item.image}" alt="${item.name}" />
+          <div class="drawer-item-info">
+            <div class="drawer-item-top">
+              <strong>${item.name}</strong>
+              <button type="button" onclick="removeCartItem(${idx})" class="icon-btn">🗑</button>
+            </div>
+            <span class="muted-sm">Size: ${item.size} • ${item.color}</span>
+            <div class="drawer-item-bottom">
+              <div class="qty-stepper sm">
+                <button type="button" onclick="changeCartQty(${idx}, -1)">−</button>
+                <span>${item.quantity}</span>
+                <button type="button" onclick="changeCartQty(${idx}, 1)">+</button>
+              </div>
+              <strong>${formatINR(item.price * item.quantity)}</strong>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      const sub = state.cart.reduce((s, i) => s + i.price * i.quantity, 0);
+      const orig = state.cart.reduce((s, i) => s + i.originalPrice * i.quantity, 0);
+      const savings = orig - sub;
+      const promo = state.promoApplied ? Math.round(sub * 0.1) : 0;
+      const finalTotal = Math.max(0, sub - promo);
+
+      document.getElementById('cartSubtotalVal').textContent = formatINR(sub);
+      document.getElementById('cartSavingsVal').textContent = '− ' + formatINR(savings);
+      document.getElementById('promoRow').classList.toggle('hidden', !state.promoApplied);
+      document.getElementById('promoDiscountVal').textContent = '− ' + formatINR(promo);
+      document.getElementById('cartFinalTotalVal').textContent = formatINR(finalTotal);
+      document.getElementById('checkoutTotalDisplay').textContent = formatINR(finalTotal);
+    }
+
+    window.changeCartQty = function(idx, delta) {
+      state.cart[idx].quantity += delta;
+      if (state.cart[idx].quantity <= 0) state.cart.splice(idx, 1);
+      saveStorage();
+      renderCartDrawer();
+    };
+
+    window.removeCartItem = function(idx) {
+      state.cart.splice(idx, 1);
+      saveStorage();
+      renderCartDrawer();
+    };
+
+    function renderWishlistDrawer() {
+      const body = document.getElementById('wishlistItemsContainer');
+      const items = PRODUCTS.filter(p => state.wishlist.includes(p.id));
+      if (items.length === 0) {
+        body.innerHTML = `<div class="empty-drawer"><h4>No saved items yet</h4><p>Tap the heart icon on any garment to save it here.</p></div>`;
+        return;
+      }
+      body.innerHTML = items.map(item => `
+        <div class="drawer-item">
+          <img src="${item.image}" alt="${item.name}" />
+          <div class="drawer-item-info">
+            <strong>${item.name}</strong>
+            <span class="muted-sm">${item.gender} • ${item.category}</span>
+            <strong>${formatINR(item.price)}</strong>
+            <div class="wish-actions">
+              <button type="button" class="btn btn-dark-sm" onclick="addToCart('${item.id}'); document.getElementById('wishlistDrawerBackdrop').classList.add('hidden'); document.getElementById('cartDrawerBackdrop').classList.remove('hidden');">Move to Bag</button>
+              <button type="button" class="text-btn" onclick="toggleWishlist('${item.id}')">Remove</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Event Listeners Setup
+    document.addEventListener('DOMContentLoaded', () => {
+      updateBadges();
+      renderCategoryPills();
+      renderCatalog();
+      renderStaticSections();
+      renderAIStudio();
+      renderCartDrawer();
+      renderWishlistDrawer();
+
+      // Gender Navigation & Tabs
+      document.querySelectorAll('[data-gender]').forEach(el => {
+        el.addEventListener('click', () => {
+          const g = el.getAttribute('data-gender');
+          if (!g) return;
+          state.gender = g;
+          state.category = 'All';
+          state.ageGroup = 'All Ages';
+          document.querySelectorAll('#genderTabs .tab-btn').forEach(b => b.classList.toggle('active', b.dataset.gender === g));
+          document.getElementById('mobileMenuDrawer').classList.add('hidden');
+          renderCategoryPills();
+          renderCatalog();
+        });
+      });
+
+      // Kids Age Pills
+      document.querySelectorAll('.age-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.ageGroup = btn.dataset.age;
+          document.querySelectorAll('.age-pill').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderCatalog();
+        });
+      });
+
+      // Filters & Sort
+      document.getElementById('catalogSearchInput').addEventListener('input', e => { state.search = e.target.value; renderCatalog(); });
+      document.getElementById('globalSearchInput').addEventListener('input', e => {
+        state.search = e.target.value;
+        document.getElementById('catalogSearchInput').value = e.target.value;
+        renderCatalog();
+      });
+      document.getElementById('sizeFilter').addEventListener('change', e => { state.size = e.target.value; renderCatalog(); });
+      document.getElementById('colorFilter').addEventListener('change', e => { state.color = e.target.value; renderCatalog(); });
+      document.getElementById('maxPriceSlider').addEventListener('input', e => {
+        state.maxPrice = Number(e.target.value);
+        document.getElementById('maxPriceLabel').textContent = formatINR(state.maxPrice);
+        renderCatalog();
+      });
+      document.getElementById('sortSelect').addEventListener('change', e => { state.sort = e.target.value; renderCatalog(); });
+
+      document.querySelectorAll('.tag-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          state.tag = chip.dataset.tag;
+          document.querySelectorAll('.tag-chip').forEach(c => c.classList.remove('active'));
+          chip.classList.add('active');
+          renderCatalog();
+        });
+      });
+
+      document.getElementById('resetFiltersBtn').addEventListener('click', () => {
+        state.gender = 'All'; state.category = 'All'; state.ageGroup = 'All Ages';
+        state.size = 'All'; state.color = 'All'; state.maxPrice = 11000;
+        state.tag = 'All'; state.search = '';
+        document.getElementById('catalogSearchInput').value = '';
+        document.getElementById('sizeFilter').value = 'All';
+        document.getElementById('colorFilter').value = 'All';
+        document.getElementById('maxPriceSlider').value = 11000;
+        document.getElementById('maxPriceLabel').textContent = '₹11,000';
+        document.querySelectorAll('#genderTabs .tab-btn').forEach(b => b.classList.toggle('active', b.dataset.gender === 'All'));
+        document.querySelectorAll('.tag-chip').forEach(c => c.classList.toggle('active', c.dataset.tag === 'All'));
+        renderCategoryPills();
+        renderCatalog();
+      });
+
+      // AI Studio Listeners
+      document.querySelectorAll('.ai-g-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.aiGender = btn.dataset.gender;
+          document.querySelectorAll('.ai-g-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderAIStudio();
+        });
+      });
+      ['aiOccasion', 'aiStyle', 'aiCategory', 'aiBudget'].forEach(id => {
+        document.getElementById(id).addEventListener('change', e => {
+          state[id] = e.target.value;
+          renderAIStudio();
+        });
+      });
+      document.getElementById('addCompleteLookBtn').addEventListener('click', () => {
+        (window.__currentOutfitIds || []).forEach(id => addToCart(id));
+        showToast('Added Complete AI Curated Look to Bag!');
+      });
+
+      // Drawers & Modals Toggles
+      document.getElementById('mobileMenuBtn').addEventListener('click', () => document.getElementById('mobileMenuDrawer').classList.toggle('hidden'));
+      document.getElementById('searchToggleBtn').addEventListener('click', () => document.getElementById('searchBarDrawer').classList.toggle('hidden'));
+      document.getElementById('closeSearchBtn').addEventListener('click', () => document.getElementById('searchBarDrawer').classList.add('hidden'));
+      document.getElementById('clearSearchBtn').addEventListener('click', () => {
+        state.search = '';
+        document.getElementById('globalSearchInput').value = '';
+        document.getElementById('catalogSearchInput').value = '';
+        renderCatalog();
+      });
+
+      document.getElementById('cartOpenBtn').addEventListener('click', () => { renderCartDrawer(); document.getElementById('cartDrawerBackdrop').classList.remove('hidden'); });
+      document.getElementById('footerOpenBag').addEventListener('click', () => { renderCartDrawer(); document.getElementById('cartDrawerBackdrop').classList.remove('hidden'); });
+      document.getElementById('closeCartBtn').addEventListener('click', () => document.getElementById('cartDrawerBackdrop').classList.add('hidden'));
+
+      document.getElementById('wishlistOpenBtn').addEventListener('click', () => { renderWishlistDrawer(); document.getElementById('wishlistDrawerBackdrop').classList.remove('hidden'); });
+      document.getElementById('footerOpenWishlist').addEventListener('click', () => { renderWishlistDrawer(); document.getElementById('wishlistDrawerBackdrop').classList.remove('hidden'); });
+      document.getElementById('closeWishlistBtn').addEventListener('click', () => document.getElementById('wishlistDrawerBackdrop').classList.add('hidden'));
+
+      // Quick View Controls
+      document.getElementById('closeQvBtn').addEventListener('click', () => document.getElementById('quickViewModal').classList.add('hidden'));
+      document.getElementById('qvMinusBtn').addEventListener('click', () => {
+        state.qvQty = Math.max(1, state.qvQty - 1);
+        document.getElementById('qvQtyValue').textContent = state.qvQty;
+      });
+      document.getElementById('qvPlusBtn').addEventListener('click', () => {
+        state.qvQty += 1;
+        document.getElementById('qvQtyValue').textContent = state.qvQty;
+      });
+      document.getElementById('qvAddToBagBtn').addEventListener('click', () => {
+        if (state.qvProduct) {
+          addToCart(state.qvProduct.id, state.qvSize, state.qvColor, state.qvQty);
+          document.getElementById('quickViewModal').classList.add('hidden');
+        }
+      });
+      document.getElementById('qvWishlistBtn').addEventListener('click', () => {
+        if (state.qvProduct) toggleWishlist(state.qvProduct.id);
+      });
+
+      // Promo & Demo Checkout
+      document.getElementById('applyPromoBtn').addEventListener('click', () => {
+        const val = document.getElementById('promoInput').value.trim().toUpperCase();
+        if (val === 'THREADORA10') {
+          state.promoApplied = true;
+          renderCartDrawer();
+          showToast('Applied 10% THREADORA10 privilege!');
+        } else {
+          showToast('Enter code THREADORA10 for 10% off');
+        }
+      });
+
+      document.getElementById('openCheckoutBtn').addEventListener('click', () => {
+        document.getElementById('cartDrawerBackdrop').classList.add('hidden');
+        document.getElementById('checkoutFormView').classList.remove('hidden');
+        document.getElementById('checkoutSuccessView').classList.add('hidden');
+        document.getElementById('checkoutModal').classList.remove('hidden');
+      });
+      document.getElementById('closeCheckoutBtn').addEventListener('click', () => document.getElementById('checkoutModal').classList.add('hidden'));
+      document.getElementById('finishCheckoutBtn').addEventListener('click', () => document.getElementById('checkoutModal').classList.add('hidden'));
+
+      document.querySelectorAll('.pm-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.pm-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
+
+      document.getElementById('demoCheckoutForm').addEventListener('submit', e => {
+        e.preventDefault();
+        const name = document.getElementById('chkName').value || 'Valued Guest';
+        const orderId = 'THR-' + Math.floor(100000 + Math.random() * 900000);
+        const count = state.cart.reduce((s, i) => s + i.quantity, 0);
+        const total = document.getElementById('checkoutTotalDisplay').textContent;
+
+        document.getElementById('orderIdText').textContent = `ORDER CONFIRMED • ${orderId}`;
+        document.getElementById('thankYouTitle').textContent = `Thank You, ${name}`;
+        document.getElementById('orderSummaryMsg').textContent = `Your THREADORA order of ${count} item(s) totaling ${total} has been scheduled for express dispatch.`;
+
+        state.cart = [];
+        state.promoApplied = false;
+        saveStorage();
+        renderCartDrawer();
+
+        document.getElementById('checkoutFormView').classList.add('hidden');
+        document.getElementById('checkoutSuccessView').classList.remove('hidden');
+      });
+
+      // Newsletter & Contact
+      document.getElementById('newsletterForm').addEventListener('submit', e => {
+        e.preventDefault();
+        document.getElementById('newsletterForm').classList.add('hidden');
+        document.getElementById('newsletterFeedback').classList.remove('hidden');
+      });
+      document.getElementById('contactForm').addEventListener('submit', e => {
+        e.preventDefault();
+        document.getElementById('contactForm').classList.add('hidden');
+        document.getElementById('contactFeedback').classList.remove('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
